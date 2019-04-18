@@ -14,7 +14,7 @@ app.get('/get_video_record', function (req, res) {
         if (All[uid][token]) {
             const t = JSON.parse(JSON.stringify(All[uid][token]));
             console.log(t)
-            res.sendFile(__dirname + '/' + t);
+            res.sendFile(__dirname + '/video_records/' + t);
             setTimeout(()=>{delete (All[uid][token]);},3000)
         } else {
             res.send(null);
